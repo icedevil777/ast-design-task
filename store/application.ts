@@ -1,12 +1,20 @@
-import { defineStore } from 'pinia'
+import { defineStore } from 'pinia';
+import { generateFakeProduct } from '~/utils/generate';
 
-/**
- * Хранилище приложения для управления глобальными состояниями.
- */
+const INITIAL_PRODUCT_COUNT = 13;
+
+const getProducts = () => {
+  const arrProducts: Array<Object> = [];
+  for (let i = 0; i < INITIAL_PRODUCT_COUNT; i++) {
+    arrProducts.push(generateFakeProduct());
+  }
+  return arrProducts;
+};
+
 export const useApplicationStore = defineStore('application', () => {
-  const welcome = 'Привет!'
+  const products = getProducts();
 
   return {
-    welcome,
-  }
-})
+    products,
+  };
+});

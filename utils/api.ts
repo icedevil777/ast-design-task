@@ -1,3 +1,3 @@
 export const apiPath = {
-    hello: '/api/hello',
+  hello: '/api/hello',
 }

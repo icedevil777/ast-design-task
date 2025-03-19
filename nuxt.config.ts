@@ -27,4 +27,7 @@ export default defineNuxtConfig({
       Roboto: [400, 500, 600, 700],
     },
   },
+  routeRules: {
+    '/api/*': { cache: { maxAge: 1 } },
+  }
 })
