@@ -1,19 +1,18 @@
-
-import {useApplicationStore} from '~/store/application'
+import { useApplicationStore } from '~/store/application';
 import { createPinia } from 'pinia';
 
 export default defineEventHandler((event) => {
   let id: string | number | undefined = getRouterParam(event, 'id');
 
   if (id === undefined) {
-    return { error: 'ID is required' }
-  } 
+    return { error: 'ID is required' };
+  }
 
   id = parseInt(id, 10);
   const pinia = createPinia();
-  const products = useApplicationStore(pinia).products
+  const products = useApplicationStore(pinia).products;
 
   return {
-    name: products[id]
-  }
-})
+    name: products[id],
+  };
+});
