@@ -1,15 +1,19 @@
 <template>
-  <div>
-    <Header />
-    <div class="myh-screen">
+  <div class="">
+    <Header class="my-header" />
+    <div>
       <NuxtPage />
     </div>
     <Footer />
   </div>
 </template>
 
-<style scoped>
-.myh-screen {
-  height: calc(100vh - 92px - 92px);
+<style>
+.my-header {
+  background-color: white;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  width: 100%;
 }
 </style>
