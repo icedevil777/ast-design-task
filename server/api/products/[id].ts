@@ -1,4 +1,4 @@
-import { useApplicationStore } from '~/store/application';
+import { useApplicationStore } from '~/stores/application';
 import { createPinia } from 'pinia';
 
 export default defineEventHandler((event) => {

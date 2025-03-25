@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import cardPng from '../assets/img/card.png';
+import { useCardStore } from '~/stores/card';
 
+const store = useCardStore()
 const isOpen = ref(false);
 
 const handleMouseEnter = () => {
@@ -53,7 +55,7 @@ const text = computed(() => {
       <span class="font-[600] text-[12px]">{{ product.name }}</span>
       <div class="font-[400] text-[14px]">{{ text }}</div>
     </div>
-    <button v-show="isOpen" class="bg-black text-white rounded-lg px-5 py-1.5 font-[500] text-[14px] cursor-pointer mt-2">В корзину</button>
+    <button @click="store.increment" v-show="isOpen" class="bg-black text-white rounded-lg px-5 py-1.5 font-[500] text-[14px] cursor-pointer mt-2">В корзину</button>
   </div>
 </template>
 
