@@ -36,7 +36,7 @@ const text = computed(() => {
 </script>
 
 <template>
-  <div class="p-4 h-[360px]" v-on:mouseleave="handleMouseLeave">
+  <div class="p-[20px] h-[360px]" v-on:mouseleave="handleMouseLeave">
     <div :class="{ 'my-after': isOpen }" class="w-[201px] cursor-pointer" v-on:mouseenter="handleMouseEnter">
       <div class="relative">
         <img v-if="product.image" class="object-cover h-[201px] w-[201px] rounded-xl" :src="imageUrl" @error="handleImageError" />
