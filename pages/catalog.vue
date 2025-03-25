@@ -49,7 +49,7 @@ const showInfo = () => {
 }
 
 .popup {
-  position: absolute;
+  position: fixed;
   right: 40px;
   bottom: 40px;
   /* transform: translate(-50%, -50%); */
