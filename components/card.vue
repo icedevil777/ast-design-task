@@ -29,7 +29,7 @@ const handleImageError = (): void => {
 };
 
 const text = computed((): string => {
-  return props.product.brand.length > 10 ? props.product.brand.slice(1, 20) + ' ...' : props.product.brand + ' ' + props.product.brand;
+  return props.product.brand.length > 12 ? props.product.brand.slice(1, 20) + ' ...' : props.product.brand;
 });
 </script>
 
