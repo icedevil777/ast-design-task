@@ -2,11 +2,11 @@
 import cardPng from '../assets/img/card.png';
 
 const isOpen = ref(false);
-const handleMouseEnter = ():void => {
+const handleMouseEnter = (): void => {
   isOpen.value = true;
 };
 
-const handleMouseLeave = ():void => {
+const handleMouseLeave = (): void => {
   isOpen.value = false;
 };
 
@@ -24,12 +24,12 @@ const props = defineProps<{
 
 let imageUrl = ref(props.product.image);
 
-const handleImageError = ():void => {
+const handleImageError = (): void => {
   imageUrl.value = cardPng;
 };
 
-const text = computed(():string => {
-  return props.product.brand.length > 15 ? props.product.brand.slice(1, 20) + ' ...' : props.product.brand + ' ' + props.product.brand;
+const text = computed((): string => {
+  return props.product.brand.length > 10 ? props.product.brand.slice(1, 20) + ' ...' : props.product.brand + ' ' + props.product.brand;
 });
 </script>
 
