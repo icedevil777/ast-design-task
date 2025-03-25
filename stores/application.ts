@@ -1,7 +1,7 @@
 import { defineStore } from 'pinia';
 import { generateFakeProduct } from '~/utils/generate';
 
-const INITIAL_PRODUCT_COUNT = 13;
+const INITIAL_PRODUCT_COUNT = 12;
 
 const getProducts = () => {
   const arrProducts: Array<Object> = [];
