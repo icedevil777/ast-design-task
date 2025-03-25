@@ -24,20 +24,20 @@ import { useCardStore } from '~/stores/card';
 const store = useCardStore();
 const isInfo = ref(false);
 
-const text = computed(() => {
+const text = computed(():string => {
   return store.count ? '' : 'Добавьте товары в корзину!';
 });
 
-const clickCallback = () => {
+const clickCallback = ():void => {
   store.increment();
   showInfo();
 };
 
-const closeInfo = () => {
+const closeInfo = ():void => {
   isInfo.value = false;
 };
 
-const showInfo = () => {
+const showInfo = ():void => {
   isInfo.value = true;
   window.setTimeout(closeInfo, 2000);
 };

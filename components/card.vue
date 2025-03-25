@@ -2,14 +2,12 @@
 import cardPng from '../assets/img/card.png';
 
 const isOpen = ref(false);
-const handleMouseEnter = () => {
+const handleMouseEnter = ():void => {
   isOpen.value = true;
-  console.log('handleMouseEnter');
 };
 
-const handleMouseLeave = () => {
+const handleMouseLeave = ():void => {
   isOpen.value = false;
-  console.log('handleMouseLeave');
 };
 
 interface Product {
@@ -26,11 +24,11 @@ const props = defineProps<{
 
 let imageUrl = ref(props.product.image);
 
-const handleImageError = () => {
+const handleImageError = ():void => {
   imageUrl.value = cardPng;
 };
 
-const text = computed(() => {
+const text = computed(():string => {
   return props.product.brand.length > 15 ? props.product.brand.slice(1, 20) + ' ...' : props.product.brand + ' ' + props.product.brand;
 });
 </script>
